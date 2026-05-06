@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title> Online Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="quiz-page">
+
+<div class="container">
+
+    <div class="dark-toggle">
+
+        <button onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <h1> Online Quiz</h1>
+
+    <!-- START SCREEN -->
+
+    <div id="start-screen">
+
+        <h2>Welcome</h2>
+<div id="categories">
+
+<button onclick="filterQuestions('All')">
+All
+</button>
+
+<button onclick="filterQuestions('Java')">
+Java
+</button>
+
+<button onclick="filterQuestions('Python')">
+Python
+</button>
+
+<button onclick="filterQuestions('SQL')">
+SQL
+</button>
+
+<button onclick="filterQuestions('DSA')">
+DSA
+</button>
+
+<button onclick="filterQuestions('Git')">
+Git
+</button>
+
+<button onclick="filterQuestions('Communication')">
+Communication
+</button>
+
+</div>
+        <p>Total Questions:
+            <span id="total-questions"></span>
+        </p>
+
+        <p>Time Limit: 120 Seconds</p>
+
+        <button id="start-btn">
+            Start Quiz
+        </button>
+
+    </div>
+
+    <!-- QUIZ SCREEN -->
+
+    <div id="quiz-screen" style="display:none;">
+
+        <div class="top-bar">
+
+            <div id="timer">
+                ⏰ 120
+            </div>
+
+            <div id="score">
+                🏆 Score: 0
+            </div>
+
+            <div id="high-score">
+                ⭐ High Score: 0
+            </div>
+
+        </div>
+
+        <div id="progress-container">
+
+            <div id="progress-bar"></div>
+
+        </div>
+
+        <div id="category"></div>
+
+        <h2 id="question"></h2>
+
+        <div id="options"></div>
+
+        <div class="controls">
+
+            <button id="prev-btn">
+                Previous
+            </button>
+
+            <button id="skip-btn">
+                Skip
+            </button>
+
+            <button id="next-btn">
+                Next
+            </button>
+
+            <button id="finish-btn">
+                Finish Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- RESULT SCREEN -->
+
+    <div id="result-screen" style="display:none;">
+
+        <h2>Quiz Finished 🎉</h2>
+
+        <h1 id="final-score"></h1>
+
+        <p id="percentage"></p>
+
+        <p id="correct-count"></p>
+
+        <p id="wrong-count"></p>
+
+        <p id="attempted"></p>
+
+        <p id="performance"></p>
+
+        <button id="restart-btn">
+            Restart Quiz
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
